@@ -1,0 +1,27 @@
+class Animal {
+    public void crier() {
+        System.out.println("Cri d'animal inconnu");
+    }
+}
+
+class Chien extends Animal {
+    public void crier() {
+        System.out.println("Le chien aboie");
+    }
+}
+
+class Chat extends Animal {
+    public void crier() {
+        System.out.println("Le chat miaule");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal animal1 = new Chien(); // Liaison dynamique
+        Animal animal2 = new Chat();  // Liaison dynamique
+        
+        animal1.crier(); // Appelle la méthode crier() de Chien
+        animal2.crier(); // Appelle la méthode crier() de Chat
+    }
+}
