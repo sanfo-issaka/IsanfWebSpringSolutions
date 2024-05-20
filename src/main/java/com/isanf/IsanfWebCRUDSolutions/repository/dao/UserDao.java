@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.User;
+import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
 import com.isanf.IsanfWebCRUDSolutions.repository.UserRepository;
 
 @Repository
@@ -16,13 +16,13 @@ public class UserDao {
 	UserRepository userRepository;
 	
 	//Save User
-	public User saveUser(User user) {
+	public UserOld saveUser(UserOld user) {
 		return userRepository.save(user);
 	}
 	
 	//Get User
-	public User getUserById(int id) {
-		Optional<User> optional = userRepository.findById(id);
+	public UserOld getUserById(int id) {
+		Optional<UserOld> optional = userRepository.findById(id);
 		if(optional.isEmpty()) {
 			return null;
 		}
@@ -30,13 +30,13 @@ public class UserDao {
 	}
 	
 	//Get all Users
-	public List<User> getAllUsers(){
+	public List<UserOld> getAllUsers(){
 		return userRepository.findAll();
 	}
 	
 	//Update User
-	public User updateUser(User user, int id) {
-		User findingUser = getUserById(id);
+	public UserOld updateUser(UserOld user, int id) {
+		UserOld findingUser = getUserById(id);
 		if(findingUser != null) {
 			findingUser.setNom(user.getNom());
 			findingUser.setEmail(user.getEmail());
@@ -48,7 +48,7 @@ public class UserDao {
 	
 	//Delete User
 	public boolean deleteUser(int id) {
-		User user = getUserById(id);
+		UserOld user = getUserById(id);
 		if(user != null) {
 			userRepository.delete(user);
 			return true;

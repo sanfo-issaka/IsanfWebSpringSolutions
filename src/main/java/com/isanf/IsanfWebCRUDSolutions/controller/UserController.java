@@ -3,6 +3,7 @@ package com.isanf.IsanfWebCRUDSolutions.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.User;
+import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
+import com.isanf.IsanfWebCRUDSolutions.repository.dao.UserValidator;
 import com.isanf.IsanfWebCRUDSolutions.service.UserService;
 import com.isanf.IsanfWebCRUDSolutions.service.dto.ResponseStructure;
 
@@ -23,25 +25,27 @@ public class UserController {
 	
 	//save
 	@PostMapping("/user")
-	public ResponseStructure<User> saveUser(@RequestBody User user){
+	public ResponseStructure<UserOld> saveUser(@RequestBody UserOld user, BindingResult result){
+		//R 1
+		new UserValidator().validate(user, result);
 		return userService.saveUser(user);
 	}
 	
 	//get
 	@GetMapping("/user/{id}")
-	public ResponseStructure<User> getUserById(@PathVariable int id){
+	public ResponseStructure<UserOld> getUserById(@PathVariable int id){
 		return userService.getUserById(id);
 	}
 	
 	//get all
 	@GetMapping("/user")
-	public ResponseStructure<List<User>> getAllUsers(){
+	public ResponseStructure<List<UserOld>> getAllUsers(){
 		return userService.getAllUsers();
 	}
 	
 	//update
 	@PutMapping("/user/{id}")
-	public ResponseStructure<User> updateUser(@RequestBody User user, @PathVariable int id){
+	public ResponseStructure<UserOld> updateUser(@RequestBody UserOld user, @PathVariable int id){
 		return userService.updateUser(user, id);
 	}
 	

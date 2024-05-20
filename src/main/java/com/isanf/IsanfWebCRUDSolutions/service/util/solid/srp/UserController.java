@@ -1,6 +1,6 @@
 package com.isanf.IsanfWebCRUDSolutions.service.util.solid.srp;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.User;
+import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
 
 public class UserController {
     private final UserService userService;
@@ -9,7 +9,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    public void createUser(User user) {
+    public void createUser(UserOld user) {
         // Validation logic
         userService.createUser(user);
     }

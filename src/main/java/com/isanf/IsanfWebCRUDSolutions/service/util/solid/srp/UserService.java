@@ -1,6 +1,6 @@
 package com.isanf.IsanfWebCRUDSolutions.service.util.solid.srp;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.User;
+import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
 import com.isanf.IsanfWebCRUDSolutions.repository.UserRepository;
 
 public class UserService {
@@ -10,7 +10,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public void createUser(User user) {
+    public void createUser(UserOld user) {
         // Business logic for creating a user
         userRepository.save(user);
     }

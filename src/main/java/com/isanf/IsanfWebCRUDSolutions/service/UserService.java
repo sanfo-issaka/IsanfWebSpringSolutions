@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.User;
+import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
 import com.isanf.IsanfWebCRUDSolutions.repository.dao.UserDao;
 import com.isanf.IsanfWebCRUDSolutions.service.dto.ResponseStructure;
 
@@ -17,9 +17,9 @@ public class UserService {
 	UserDao userDao;
 	
 	//save
-	public ResponseStructure<User> saveUser(User user){
-		ResponseStructure<User> responseStructure = new ResponseStructure<User>();
-		User savedUser = userDao.saveUser(user);
+	public ResponseStructure<UserOld> saveUser(UserOld user){
+		ResponseStructure<UserOld> responseStructure = new ResponseStructure<UserOld>();
+		UserOld savedUser = userDao.saveUser(user);
 		if(savedUser != null) {
 			responseStructure.setData(savedUser);
 			responseStructure.setStatusCode(HttpStatus.CREATED.value());
@@ -33,9 +33,9 @@ public class UserService {
 	}
 	
 	//get
-	public ResponseStructure<User> getUserById(Integer id){
-		ResponseStructure<User> responseStructure = new ResponseStructure<User>();
-		User user = userDao.getUserById(id);
+	public ResponseStructure<UserOld> getUserById(Integer id){
+		ResponseStructure<UserOld> responseStructure = new ResponseStructure<UserOld>();
+		UserOld user = userDao.getUserById(id);
 		if(user != null) {
 			responseStructure.setData(user);
 			responseStructure.setStatusCode(HttpStatus.OK.value());
@@ -48,9 +48,9 @@ public class UserService {
 		return responseStructure;
 	}
 	//get all
-	public ResponseStructure<List<User>> getAllUsers(){
-		 ResponseStructure<List<User>>  responseStructure = new  ResponseStructure<List<User>>();
-		 List<User> usersList = userDao.getAllUsers();
+	public ResponseStructure<List<UserOld>> getAllUsers(){
+		 ResponseStructure<List<UserOld>>  responseStructure = new  ResponseStructure<List<UserOld>>();
+		 List<UserOld> usersList = userDao.getAllUsers();
 		 if(usersList.size() > 0) {
 			responseStructure.setData(usersList);
 			responseStructure.setStatusCode(HttpStatus.OK.value());
@@ -64,9 +64,9 @@ public class UserService {
 	}
 	
 	//update
-	public ResponseStructure<User> updateUser(User user, Integer id){
-		ResponseStructure<User> responseStructure = new ResponseStructure<User>();
-		User updatedUser = userDao.updateUser(user, id);
+	public ResponseStructure<UserOld> updateUser(UserOld user, Integer id){
+		ResponseStructure<UserOld> responseStructure = new ResponseStructure<UserOld>();
+		UserOld updatedUser = userDao.updateUser(user, id);
 		if(updatedUser != null) {
 			responseStructure.setData(updatedUser);
 			responseStructure.setStatusCode(HttpStatus.RESET_CONTENT.value());
