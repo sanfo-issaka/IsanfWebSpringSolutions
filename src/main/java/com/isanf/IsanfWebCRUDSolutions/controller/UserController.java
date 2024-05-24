@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
 import com.isanf.IsanfWebCRUDSolutions.repository.dao.UserValidator;
+import com.isanf.IsanfWebCRUDSolutions.service.MonService;
 import com.isanf.IsanfWebCRUDSolutions.service.UserService;
 import com.isanf.IsanfWebCRUDSolutions.service.dto.ResponseStructure;
 
@@ -22,12 +23,14 @@ public class UserController {
 
 	@Autowired
 	UserService userService;
+	@Autowired
+	MonService monService;
 	
 	//save
 	@PostMapping("/user")
 	public ResponseStructure<UserOld> saveUser(@RequestBody UserOld user, BindingResult result){
 		//R 1
-		new UserValidator().validate(user, result);
+		//new UserValidator().validate(user, result);
 		return userService.saveUser(user);
 	}
 	
@@ -40,6 +43,8 @@ public class UserController {
 	//get all
 	@GetMapping("/user")
 	public ResponseStructure<List<UserOld>> getAllUsers(){
+		MonService monService = new MonService();
+		monService.utiliserMesBeans();
 		return userService.getAllUsers();
 	}
 	
