@@ -117,6 +117,7 @@ public class UserResource extends ExceptionHandling {
         return response(OK, EMAIL_SENT + email);
     }
 
+    //R 9
     @DeleteMapping("/delete/{username}")
     @PreAuthorize("hasAnyAuthority('user:delete')")
     public ResponseEntity<HttpResponse> deleteUser(@PathVariable("username") String username) throws IOException {
