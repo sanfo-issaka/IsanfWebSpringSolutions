@@ -94,4 +94,20 @@ public class UserService {
 		}
 		return responseStructure;
 	}
+
+	//R 19
+	public ResponseStructure<UserOld> findAllByGivenName(String name) {
+		ResponseStructure<UserOld> responseStructure = new ResponseStructure<UserOld>();
+		UserOld user = userDao.findAllByGivenName(name);
+		if(user != null) {
+			responseStructure.setData(user);
+			responseStructure.setStatusCode(HttpStatus.OK.value());
+			responseStructure.setMessage("Utilisateur trouvé.");
+		} else {
+			responseStructure.setData(null);
+			responseStructure.setStatusCode(HttpStatus.NO_CONTENT.value());
+			responseStructure.setMessage("Utilisateur non trouvé.");
+		}
+		return responseStructure;
+	}
 }

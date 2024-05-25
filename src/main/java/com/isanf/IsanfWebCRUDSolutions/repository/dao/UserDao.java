@@ -55,6 +55,15 @@ public class UserDao {
 		}
 		return false;
 	}
+
+	//R 19
+	public UserOld findAllByGivenName(String name) {
+		Optional<UserOld> optional = userRepository.findAllByNom(name);
+		if(optional.isEmpty()) {
+			return null;
+		}
+		return optional.get();
+	}
 	
 	
 }

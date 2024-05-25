@@ -1,0 +1,1 @@
+set MODEL=exists && mvnw spring-boot:run

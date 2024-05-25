@@ -36,15 +36,24 @@ public class UserController {
 	
 	//get
 	@GetMapping("/user/{id}")
+	//R 20
 	public ResponseStructure<UserOld> getUserById(@PathVariable int id){
 		return userService.getUserById(id);
+	}
+	
+	//get by name
+	@GetMapping("/userByName/{name}")
+	public ResponseStructure<UserOld> getUserById(@PathVariable String name){
+		//R 19
+		return userService.findAllByGivenName(name);
 	}
 	
 	//get all
 	@GetMapping("/user")
 	public ResponseStructure<List<UserOld>> getAllUsers(){
-		MonService monService = new MonService();
-		monService.utiliserMesBeans();
+		//R 8
+//		MonService monService = new MonService();
+//		monService.utiliserMesBeans();
 		return userService.getAllUsers();
 	}
 	
