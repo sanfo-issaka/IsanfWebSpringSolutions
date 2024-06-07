@@ -18,7 +18,7 @@ public class ApiService {
     }
 
     public WeatherData getWeatherData(String city) {
-        String apiKey = "e6b71ca458055565996db429e6137b50";
+        String apiKey = "ca2fce80678dc46a0d75ccc1ef840e49";
         String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
 
         return restTemplate.getForObject(url, WeatherData.class);

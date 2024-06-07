@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
-import com.isanf.IsanfWebSpringSolutions.repository.dao.UserValidator;
 import com.isanf.IsanfWebSpringSolutions.service.MonService;
 import com.isanf.IsanfWebSpringSolutions.service.UserService;
 import com.isanf.IsanfWebSpringSolutions.service.dto.ResponseStructure;

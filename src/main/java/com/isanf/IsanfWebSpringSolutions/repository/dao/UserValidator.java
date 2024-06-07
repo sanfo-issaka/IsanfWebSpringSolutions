@@ -23,7 +23,7 @@ public class UserValidator implements Validator {
         // Validation du nom
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nom", "NotEmpty");
         if (user.getNom().length() < 2 || user.getNom().length() > 50) {
-            errors.rejectValue("nom", "Size.student.nom");
+            errors.rejectValue("nom", "Size.user.nom");
         }
 
         // Validation de l'email
