@@ -1,2 +1,1 @@
-"# IsanfWebCRUDSolutions" 
 "# IsanfWebSpringSolutions" 
