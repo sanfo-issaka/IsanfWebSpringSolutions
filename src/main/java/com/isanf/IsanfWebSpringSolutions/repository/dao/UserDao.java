@@ -3,17 +3,34 @@ package com.isanf.IsanfWebSpringSolutions.repository.dao;
 import java.util.List;
 import java.util.Optional;
 
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
 import com.isanf.IsanfWebSpringSolutions.repository.UserRepository;
+
+import jakarta.websocket.Session;
 
 @Repository
 public class UserDao {
 
 	@Autowired
 	UserRepository userRepository;
+	
+	@Autowired
+    private SessionFactory sessionFactory;
+
+	//R 16
+    // HQL to retrieve all users
+	@Transactional
+    public List<UserOld> getAllUsersHQL() {
+        Session session = (Session) sessionFactory.getCurrentSession();
+        Query<UserOld> query = ((org.hibernate.Session) session).createQuery("FROM UserOld", UserOld.class);
+        return query.list();
+    }
 	
 	//Save User
 	public UserOld saveUser(UserOld user) {
@@ -54,6 +71,15 @@ public class UserDao {
 			return true;
 		}
 		return false;
+	}
+	
+	//R 15
+	public UserOld findAllByGivenName(String name) {
+		Optional<UserOld> optional = userRepository.findAllByNom(name);
+		if(optional.isEmpty()) {
+			return null;
+		}
+		return optional.get();
 	}
 	
 	

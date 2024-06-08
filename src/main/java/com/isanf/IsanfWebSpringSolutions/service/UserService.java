@@ -10,11 +10,29 @@ import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
 import com.isanf.IsanfWebSpringSolutions.repository.dao.UserDao;
 import com.isanf.IsanfWebSpringSolutions.service.dto.ResponseStructure;
 
+//R 11
 @Service
 public class UserService {
 
 	@Autowired
 	UserDao userDao;
+	
+	//R 16
+	//get all
+	public ResponseStructure<List<UserOld>> getAllUsersHQL(){
+		 ResponseStructure<List<UserOld>>  responseStructure = new  ResponseStructure<List<UserOld>>();
+		 List<UserOld> usersList = userDao.getAllUsersHQL();
+		 if(usersList.size() > 0) {
+			responseStructure.setData(usersList);
+			responseStructure.setStatusCode(HttpStatus.OK.value());
+			responseStructure.setMessage("Liste retournée avec succès.");
+		 } else {
+			responseStructure.setData(null);
+			responseStructure.setStatusCode(HttpStatus.NO_CONTENT.value());
+			responseStructure.setMessage("Liste vide.");
+		 }
+		 return responseStructure;
+	}
 	
 	//save
 	public ResponseStructure<UserOld> saveUser(UserOld user){
@@ -94,4 +112,21 @@ public class UserService {
 		}
 		return responseStructure;
 	}
+	
+	//R 15
+	public ResponseStructure<UserOld> findAllByGivenName(String name) {
+		ResponseStructure<UserOld> responseStructure = new ResponseStructure<UserOld>();
+		UserOld user = userDao.findAllByGivenName(name);
+		if(user != null) {
+			responseStructure.setData(user);
+			responseStructure.setStatusCode(HttpStatus.OK.value());
+			responseStructure.setMessage("Utilisateur trouvé.");
+		} else {
+			responseStructure.setData(null);
+			responseStructure.setStatusCode(HttpStatus.NO_CONTENT.value());
+			responseStructure.setMessage("Utilisateur non trouvé.");
+		}
+		return responseStructure;
+	}
+	
 }

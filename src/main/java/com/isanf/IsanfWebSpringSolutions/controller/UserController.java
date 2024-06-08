@@ -25,6 +25,13 @@ public class UserController {
 	@Autowired
 	MonService monService;
 	
+	//R 16
+	//get all
+	@GetMapping("/userHQL")
+	public ResponseStructure<List<UserOld>> getAllUsersHQL(){
+		return userService.getAllUsersHQL();
+	}
+	
 	//save
 	@PostMapping("/user")
 	public ResponseStructure<UserOld> saveUser(@RequestBody UserOld user, BindingResult result){
@@ -42,8 +49,9 @@ public class UserController {
 	//get all
 	@GetMapping("/user")
 	public ResponseStructure<List<UserOld>> getAllUsers(){
-		MonService monService = new MonService();
-		monService.utiliserMesBeans();
+		//R 8
+//		MonService monService = new MonService();
+//		monService.utiliserMesBeans();
 		return userService.getAllUsers();
 	}
 	
@@ -57,6 +65,14 @@ public class UserController {
 	@DeleteMapping("/user/{id}")
 	public ResponseStructure<String> deleteUser(@PathVariable int id){
 		return userService.deleteUser(id);
+	}
+	
+	//R 15
+	//get by name
+	@GetMapping("/userByName/{name}")
+	public ResponseStructure<UserOld> getUserById(@PathVariable String name){
+		//R 19
+		return userService.findAllByGivenName(name);
 	}
 	
 }

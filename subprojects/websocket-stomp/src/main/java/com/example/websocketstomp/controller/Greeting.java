@@ -1,5 +1,6 @@
 package com.example.websocketstomp.controller;
 
+//R 13
 public class Greeting {
 
     private String content;
@@ -18,4 +19,5 @@ public class Greeting {
     public void setContent(String content) {
         this.content = content;
     }
+    
 }

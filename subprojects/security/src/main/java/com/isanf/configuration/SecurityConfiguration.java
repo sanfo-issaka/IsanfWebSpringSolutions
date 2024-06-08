@@ -23,6 +23,7 @@ import static org.springframework.security.config.http.SessionCreationPolicy.STA
 
 
 @Configuration
+//R 12
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {

@@ -23,6 +23,7 @@ import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 import static com.isanf.constant.SecurityConstant.*;
 import static java.util.Arrays.*;
 
+//R 2
 @Component
 public class JWTTokenProvider {
 

@@ -14,6 +14,7 @@ public class MonService {
     @Autowired
     private List<MonInterface> mesBeans;
 
+    @Autowired //For injection
     public void utiliserMesBeans() {
         for (MonInterface bean : mesBeans) {
             bean.faireQuelqueChose(); // Les beans seront appelés dans l'ordre 1, 2, 3

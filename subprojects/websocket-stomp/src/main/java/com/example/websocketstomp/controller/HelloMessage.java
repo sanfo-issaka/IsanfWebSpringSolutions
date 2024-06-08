@@ -1,5 +1,6 @@
 package com.example.websocketstomp.controller;
 
+//R 13
 public class HelloMessage {
 
     private String name;

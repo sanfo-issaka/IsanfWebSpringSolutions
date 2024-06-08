@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 //R 8
 @Component
-@Order(3) // Ce bean sera le troisième
+@Order(1) // Ce bean sera le troisième
 public class BeanTrois implements MonInterface {
 
 	@Override
