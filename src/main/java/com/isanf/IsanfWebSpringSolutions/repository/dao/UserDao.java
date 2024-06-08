@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.repository.dao;
+package com.isanf.IsanfWebSpringSolutions.repository.dao;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
-import com.isanf.IsanfWebCRUDSolutions.repository.UserRepository;
+import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
+import com.isanf.IsanfWebSpringSolutions.repository.UserRepository;
 
 @Repository
 public class UserDao {

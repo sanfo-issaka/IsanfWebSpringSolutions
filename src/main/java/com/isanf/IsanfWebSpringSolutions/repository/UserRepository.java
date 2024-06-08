@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.isanf.IsanfWebCRUDSolutions.repository;
+package com.isanf.IsanfWebSpringSolutions.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
+import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
 
 /**
  * 

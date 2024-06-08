@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util;
+package com.isanf.IsanfWebSpringSolutions.service.util;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;

@@ -1,10 +1,10 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util;
+package com.isanf.IsanfWebSpringSolutions.service.util;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 
-import com.isanf.IsanfWebCRUDSolutions.service.MonService;
+import com.isanf.IsanfWebSpringSolutions.service.MonService;
 
 
 //R 6

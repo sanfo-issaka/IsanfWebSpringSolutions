@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.domain.entity;
+package com.isanf.IsanfWebSpringSolutions.domain.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util.solid.ocp;
+package com.isanf.IsanfWebSpringSolutions.service.util.solid.ocp;
 
 public class PayPalPaymentGateway implements PaymentGateway {
     @Override

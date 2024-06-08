@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.repository.dao;
+package com.isanf.IsanfWebSpringSolutions.repository.dao;
 
 //R 4
 //Classe interne pour les informations principales de la météo

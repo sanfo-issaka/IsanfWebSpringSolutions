@@ -1,7 +1,7 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util.solid.srp;
+package com.isanf.IsanfWebSpringSolutions.service.util.solid.srp;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
-import com.isanf.IsanfWebCRUDSolutions.repository.UserRepository;
+import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
+import com.isanf.IsanfWebSpringSolutions.repository.UserRepository;
 
 public class UserService {
     private final UserRepository userRepository;

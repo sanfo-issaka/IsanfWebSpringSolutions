@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.dto;
+package com.isanf.IsanfWebSpringSolutions.service.dto;
 
 public class ResponseStructure<T> {
 

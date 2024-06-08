@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.controller;
+package com.isanf.IsanfWebSpringSolutions.controller;
 
 import java.util.List;
 

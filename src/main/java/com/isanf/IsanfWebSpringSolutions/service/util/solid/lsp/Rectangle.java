@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util.solid.lsp;
+package com.isanf.IsanfWebSpringSolutions.service.util.solid.lsp;
 
 public class Rectangle extends Shape {
     private double width;

@@ -1,10 +1,10 @@
-package com.isanf.IsanfWebCRUDSolutions.service;
+package com.isanf.IsanfWebSpringSolutions.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.isanf.IsanfWebCRUDSolutions.repository.dao.WeatherData;
+import com.isanf.IsanfWebSpringSolutions.repository.dao.WeatherData;
 
 //R 4
 @Service

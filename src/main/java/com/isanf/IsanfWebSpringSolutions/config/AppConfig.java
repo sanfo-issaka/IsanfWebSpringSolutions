@@ -1,12 +1,12 @@
-package com.isanf.IsanfWebCRUDSolutions.config;
+package com.isanf.IsanfWebSpringSolutions.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
-import com.isanf.IsanfWebCRUDSolutions.service.MonService;
-import com.isanf.IsanfWebCRUDSolutions.service.util.BarBean;
+import com.isanf.IsanfWebSpringSolutions.service.MonService;
+import com.isanf.IsanfWebSpringSolutions.service.util.BarBean;
 
 //R 4
 @Configuration

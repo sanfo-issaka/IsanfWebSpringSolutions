@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.repository.dao;
+package com.isanf.IsanfWebSpringSolutions.repository.dao;
 
 import java.util.List;
 

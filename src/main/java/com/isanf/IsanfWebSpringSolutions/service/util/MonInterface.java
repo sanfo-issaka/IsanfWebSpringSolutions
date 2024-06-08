@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util;
+package com.isanf.IsanfWebSpringSolutions.service.util;
 
 public interface MonInterface {
 	void faireQuelqueChose();

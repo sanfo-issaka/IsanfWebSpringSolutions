@@ -1,11 +1,11 @@
-package com.isanf.IsanfWebCRUDSolutions.repository.dao;
+package com.isanf.IsanfWebSpringSolutions.repository.dao;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
+import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
 
 //R 1
 @Component

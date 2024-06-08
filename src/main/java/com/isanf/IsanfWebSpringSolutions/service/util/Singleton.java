@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util;
+package com.isanf.IsanfWebSpringSolutions.service.util;
 
 public class Singleton {
     private static Singleton instance;

@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util.solid.isp;
+package com.isanf.IsanfWebSpringSolutions.service.util.solid.isp;
 
 public interface Feedable {
     void eat();

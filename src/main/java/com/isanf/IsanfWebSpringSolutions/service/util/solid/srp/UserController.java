@@ -1,6 +1,6 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util.solid.srp;
+package com.isanf.IsanfWebSpringSolutions.service.util.solid.srp;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
+import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
 
 public class UserController {
     private final UserService userService;

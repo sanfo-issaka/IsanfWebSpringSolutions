@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util;
+package com.isanf.IsanfWebSpringSolutions.service.util;
 
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

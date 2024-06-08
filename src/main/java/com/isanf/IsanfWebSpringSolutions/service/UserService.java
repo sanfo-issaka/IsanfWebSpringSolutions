@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service;
+package com.isanf.IsanfWebSpringSolutions.service;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import com.isanf.IsanfWebCRUDSolutions.domain.entity.UserOld;
-import com.isanf.IsanfWebCRUDSolutions.repository.dao.UserDao;
-import com.isanf.IsanfWebCRUDSolutions.service.dto.ResponseStructure;
+import com.isanf.IsanfWebSpringSolutions.domain.entity.UserOld;
+import com.isanf.IsanfWebSpringSolutions.repository.dao.UserDao;
+import com.isanf.IsanfWebSpringSolutions.service.dto.ResponseStructure;
 
 @Service
 public class UserService {

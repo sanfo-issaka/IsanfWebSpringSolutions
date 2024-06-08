@@ -1,4 +1,4 @@
-package com.isanf.IsanfWebCRUDSolutions.service.util.solid.ocp;
+package com.isanf.IsanfWebSpringSolutions.service.util.solid.ocp;
 
 public interface PaymentGateway {
     void processPayment();
