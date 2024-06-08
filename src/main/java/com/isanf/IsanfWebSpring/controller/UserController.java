@@ -25,13 +25,6 @@ public class UserController {
 	@Autowired
 	MonService monService;
 	
-	//R 
-	//get all
-	@GetMapping("/userHQL")
-	public ResponseStructure<List<UserOld>> getAllUsersHQL(){
-		return userService.getAllUsersHQL();
-	}
-	
 	//save
 	@PostMapping("/user")
 	public ResponseStructure<UserOld> saveUser(@RequestBody UserOld user, BindingResult result){

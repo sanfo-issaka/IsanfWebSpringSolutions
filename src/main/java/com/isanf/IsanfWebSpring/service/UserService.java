@@ -16,23 +16,7 @@ public class UserService {
 
 	@Autowired
 	UserDao userDao;
-	
-	//R 
-	//get all
-	public ResponseStructure<List<UserOld>> getAllUsersHQL(){
-		 ResponseStructure<List<UserOld>>  responseStructure = new  ResponseStructure<List<UserOld>>();
-		 List<UserOld> usersList = userDao.getAllUsersHQL();
-		 if(usersList.size() > 0) {
-			responseStructure.setData(usersList);
-			responseStructure.setStatusCode(HttpStatus.OK.value());
-			responseStructure.setMessage("Liste retournée avec succès.");
-		 } else {
-			responseStructure.setData(null);
-			responseStructure.setStatusCode(HttpStatus.NO_CONTENT.value());
-			responseStructure.setMessage("Liste vide.");
-		 }
-		 return responseStructure;
-	}
+
 	
 	//save
 	public ResponseStructure<UserOld> saveUser(UserOld user){

@@ -4,13 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.isanf.IsanfWebSpring.domain.entity.UserOld;
 import com.isanf.IsanfWebSpring.repository.UserRepository;
 
@@ -19,18 +14,7 @@ public class UserDao {
 
 	@Autowired
 	UserRepository userRepository;
-	
-	@Autowired
-    private SessionFactory sessionFactory;
 
-	//R 
-    // HQL to retrieve all users
-	@Transactional
-    public List<UserOld> getAllUsersHQL() {
-		Session session = sessionFactory.getCurrentSession();
-        Query<UserOld> query = session.createQuery("FROM UserOld", UserOld.class);
-        return query.list();
-    }
 	
 	//Save User
 	public UserOld saveUser(UserOld user) {
