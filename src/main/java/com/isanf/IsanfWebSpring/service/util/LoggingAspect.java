@@ -20,7 +20,7 @@ public class LoggingAspect {
 
     @Before("anyPublicFindOperation()")
     public void logBeforeFind(JoinPoint joinPoint) {
-        logger.info("Executing public find method: {}", joinPoint.getSignature().toShortString());
+        logger.info("**************************************Executing public find method: {}", joinPoint.getSignature().toShortString());
         // You can access method arguments if needed
     }
 }

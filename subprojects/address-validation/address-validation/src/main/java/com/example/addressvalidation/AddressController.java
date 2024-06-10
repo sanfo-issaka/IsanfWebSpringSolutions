@@ -15,7 +15,7 @@ public class AddressController {
     @PostMapping("/")
     public ResponseEntity<String> addNewAddress(@Valid Address address, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return new ResponseEntity<>("bad request", new HttpHeaders(), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("'Line1' ne doit pas être nulle", new HttpHeaders(), HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(null, new HttpHeaders(), HttpStatus.OK);
     }

@@ -19,4 +19,9 @@ public class HelloMessage {
     public void setName(String name) {
         this.name = name;
     }
+
+	public Object getMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

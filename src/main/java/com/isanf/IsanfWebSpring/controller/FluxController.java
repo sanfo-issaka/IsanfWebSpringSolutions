@@ -12,4 +12,5 @@ public class FluxController {
     public Flux<String> getFlux() {
         return Flux.just("Response 1 ", "Response 2 ", "Response 3 ");
     }
+    
 }
